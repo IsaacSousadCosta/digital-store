@@ -66,7 +66,7 @@ Abra o endereço informado pelo Vite, normalmente `http://localhost:5173`. A var
 - [API no Vercel](https://digital-store-api-gamma.vercel.app)
 - [Variáveis de ambiente da API no Vercel](https://vercel.com/geracao-tech/digital-store-api/settings/environment-variables)
 
-A loja e a API estão publicadas no Vercel. O catálogo, o login e os pedidos dependem da conexão com um MySQL hospedado, que ainda está pendente.
+A loja e a API estão publicadas no Vercel. O catálogo usa uma instância TiDB Cloud Starter compatível com MySQL. Para rodar no computador, siga os passos com MySQL 8 acima.
 
 O front-end e a API usam projetos separados, com raízes em `frontend` e `backend`. As duas raízes têm seu próprio `vercel.json`.
 
@@ -76,7 +76,7 @@ O front-end e a API usam projetos separados, com raízes em `frontend` e `backen
 4. No projeto do front-end, configure `VITE_API_URL` com a URL pública da API, sem barra final, e faça o deploy de produção. Essa URL é pública. As credenciais do MySQL e o JWT ficam só no projeto da API.
 5. Valide o catálogo em `GET /v1/product/search?limit=8` e depois confira cadastro, login e pedidos na loja.
 
-A raiz da API informa `aguardando_configuracao` até que o banco seja conectado.
+A raiz da API informa `aguardando_configuracao` se faltarem as variáveis de conexão ou a chave JWT.
 
 ## Documentação
 
