@@ -1,6 +1,6 @@
 # Digital Store
 
-Projeto final de Front-end e Back-end da Digital College. Loja demonstrativa com catálogo, busca, detalhes de produtos, cadastro, login, carrinho e pedidos.
+Desenvolvi a Digital Store como projeto final de front-end e back-end da Digital College. A loja tem catálogo, busca, carrinho e pedidos.
 
 **Integrante**
 
@@ -8,7 +8,7 @@ Isaac Sousa da Costa
 
 ## Como rodar
 
-Você precisa de Node.js 22.12 ou superior em uma versão compatível com Vite, npm e MySQL 8. Os comandos abaixo usam PowerShell e partem da raiz do projeto.
+Para rodar no computador, você vai precisar de Node.js 22.12 ou superior, npm e MySQL 8. Os comandos abaixo são para PowerShell e partem da raiz do projeto.
 
 ### API
 
@@ -26,7 +26,7 @@ npm ci
 Copy-Item .env.example .env
 ```
 
-Ajuste a conexão no `backend/.env` e defina um `JWT_SECRET` aleatório. Use o mesmo host que estiver configurado para o usuário do MySQL.
+Abra `backend/.env`, preencha os dados do seu MySQL e crie uma chave aleatória para `JWT_SECRET`.
 
 ```powershell
 npx sequelize-cli db:migrate
@@ -66,6 +66,8 @@ Abra o endereço informado pelo Vite, normalmente `http://localhost:5173`. A var
 - [API no Vercel](https://digital-store-api-gamma.vercel.app)
 - [Variáveis de ambiente da API no Vercel](https://vercel.com/geracao-tech/digital-store-api/settings/environment-variables)
 
+A loja e a API estão publicadas no Vercel. O catálogo, o login e os pedidos dependem da conexão com um MySQL hospedado, que ainda está pendente.
+
 O front-end e a API usam projetos separados, com raízes em `frontend` e `backend`. As duas raízes têm seu próprio `vercel.json`.
 
 1. Reserve um banco vazio no seu provedor de MySQL. No projeto da API, configure `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` e um `JWT_SECRET` aleatório como variáveis sensíveis de produção. A conexão usa TLS por padrão. Se o provedor usa uma CA própria, adicione o certificado em `DB_SSL_CA`.
@@ -74,7 +76,7 @@ O front-end e a API usam projetos separados, com raízes em `frontend` e `backen
 4. No projeto do front-end, configure `VITE_API_URL` com a URL pública da API, sem barra final, e faça o deploy de produção. Essa URL é pública. As credenciais do MySQL e o JWT ficam só no projeto da API.
 5. Valide o catálogo em `GET /v1/product/search?limit=8` e depois confira cadastro, login e pedidos na loja.
 
-Enquanto o MySQL hospedado estiver pendente, a raiz da API informa `aguardando_configuracao` e as rotas que usam o banco retornam `503`.
+A raiz da API informa `aguardando_configuracao` até que o banco seja conectado.
 
 ## Documentação
 
