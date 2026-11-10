@@ -1,5 +1,6 @@
 
 const { Sequelize } = require("sequelize");
+const mysql = require("mysql2");
 const { databaseOptions } = require("./databaseOptions");
 
 const sequelize = new Sequelize(
@@ -8,6 +9,7 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     ...databaseOptions(),
+    dialectModule: mysql,
     logging: false
   }
 );

@@ -62,6 +62,10 @@ Abra o endereço informado pelo Vite, normalmente `http://localhost:5173`. A var
 
 ## Configuração no Vercel
 
+- [Loja no Vercel](https://digital-store-zeta-one.vercel.app)
+- [API no Vercel](https://digital-store-api-gamma.vercel.app)
+- [Variáveis de ambiente da API no Vercel](https://vercel.com/geracao-tech/digital-store-api/settings/environment-variables)
+
 O front-end e a API usam projetos separados, com raízes em `frontend` e `backend`. As duas raízes têm seu próprio `vercel.json`.
 
 1. Reserve um banco vazio no seu provedor de MySQL. No projeto da API, configure `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` e um `JWT_SECRET` aleatório como variáveis sensíveis de produção. A conexão usa TLS por padrão. Se o provedor usa uma CA própria, adicione o certificado em `DB_SSL_CA`.
