@@ -1,0 +1,133 @@
+
+.product-card {
+  background: transparent;
+  min-width: 0;
+}
+
+.product-card-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card-image img {
+  transform: scale(1.06);
+}
+
+.product-discount {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #e7ff86;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.product-card-info {
+  padding: 14px 4px;
+}
+
+.product-category {
+  color: #8f8f8f;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.product-card-info h3 {
+  font-size: 20px;
+  color: #474747;
+  margin: 0 0 12px;
+}
+
+.product-prices {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.product-old-price {
+  color: #8f8f8f;
+  text-decoration: line-through;
+  font-size: 15px;
+}
+
+.product-prices strong {
+  color: #1f1f1f;
+  font-size: 23px;
+}
+
+.product-stock {
+  color: #666;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.product-no-image {
+  color: #888;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .product-card-image {
+    height: 210px;
+  }
+
+  .product-card-info h3 {
+    font-size: 16px;
+  }
+
+  .product-prices strong {
+    font-size: 19px;
+  }
+}
+
+
+.product-image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.product-image-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-name-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.product-name-link:hover {
+  color: #c92071;
+  text-decoration: underline;
+}
+
+.product-image-link:focus-visible,
+.product-name-link:focus-visible {
+  outline: 2px solid #c92071;
+  outline-offset: 3px;
+  border-radius: 4px;
+}

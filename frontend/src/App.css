@@ -1,0 +1,34 @@
+
+.loja {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.loja h1 {
+  color: #474747;
+  font-size: 26px;
+  margin-bottom: 28px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 1000px) {
+  .produtos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .produtos {
+    grid-template-columns: 1fr;
+  }
+
+  .loja {
+    padding: 30px 16px;
+  }
+}

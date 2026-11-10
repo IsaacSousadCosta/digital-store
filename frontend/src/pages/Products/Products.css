@@ -1,0 +1,138 @@
+
+.products-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  min-height: 70vh;
+}
+
+.products-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.products-heading h1 {
+  color: #474747;
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+
+.products-heading p {
+  color: #666666;
+  margin: 0;
+}
+
+.products-page a {
+  color: #c92071;
+}
+
+.products-layout {
+  display: grid;
+  grid-template-columns: 308px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.products-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.products-sidebar h2 {
+  font-size: 16px;
+  color: #474747;
+  margin: 0;
+}
+
+.products-sidebar select {
+  padding: 14px;
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: #474747;
+  font: inherit;
+}
+
+.products-order {
+  display: grid;
+  gap: 8px;
+  color: #474747;
+}
+
+.products-filters {
+  padding: 22px;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.products-filters h3 {
+  color: #474747;
+  font-size: 15px;
+}
+
+.products-filters hr {
+  border: none;
+  border-top: 1px solid #eeeeee;
+  margin: 16px 0;
+}
+
+.products-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #474747;
+  cursor: pointer;
+}
+
+.products-checkbox input {
+  width: 20px;
+  height: 20px;
+  accent-color: #c92071;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.products-error {
+  color: #b42318;
+}
+
+.products-empty {
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .products-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .products-page {
+    padding: 28px 16px;
+  }
+
+  .products-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

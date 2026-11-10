@@ -1,0 +1,32 @@
+
+# Dependências
+node_modules/
+**/node_modules/
+
+# Credenciais
+.env
+.env.*
+!.env.example
+
+# Arquivos gerados
+dist/
+**/dist/
+coverage/
+.vercel/
+backend/public/images/uploads/
+*.min.js
+*.min.css
+*.backup
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.bak
+
+# VS Code
+.vscode/
+
+# Repositório original da Digital College
+/projeto-digital-store/

@@ -1,0 +1,13 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #f9f8fe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
