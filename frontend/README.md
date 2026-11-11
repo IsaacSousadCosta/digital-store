@@ -2,4 +2,4 @@
 
 Aplicação em React e Vite. Para rodar a loja com o catálogo, siga o [guia de instalação](../README.md#como-rodar).
 
-A Home fica em `/`, a listagem e a busca em `/products` e os detalhes em `/product/:id`. Os endereços em português `/produtos` e `/produto/:id` continuam disponíveis.
+A Home fica em `/`, a listagem e a busca em `/products` e os detalhes em `/product/:id`.
